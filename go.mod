@@ -7,4 +7,4 @@ require (
 	gopkg.in/yaml.v2 v2.4.0
 )
 
-replace github.com/smallfish/simpleyaml => github.com/clubw/waml latest
+replace github.com/smallfish/simpleyaml => github.com/clubw/waml v0.1.0
