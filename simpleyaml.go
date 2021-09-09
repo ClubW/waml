@@ -1,4 +1,4 @@
-// Package simpleyaml: a Go package to interact with arbitrary YAML.
+// Package waml: a Go package to interact with arbitrary YAML.
 //
 // Example:
 //      var data = []byte(`
@@ -13,7 +13,7 @@
 //                  - 333
 //      `
 //
-//      y, err := simpleyaml.NewYaml(data)
+//      y, err := waml.NewYaml(data)
 //      if err != nil {
 //      	// ERROR
 //      }
@@ -28,7 +28,7 @@
 //      // y.Get("bb").Get("cc").Get("dd").GetIndex(1).Int()
 //      // y.GetPath("bb", "cc", "ee").String()
 
-package simpleyaml
+package waml
 
 import (
 	"errors"

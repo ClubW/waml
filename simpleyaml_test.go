@@ -1,10 +1,10 @@
-package simpleyaml_test
+package waml_test
 
 import (
 	"testing"
 
-	"github.com/smallfish/simpleyaml"
-	"github.com/smallfish/simpleyaml/helper/util"
+	"github.com/clubw/waml"
+	"github.com/clubw/waml/helper/util"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -29,7 +29,7 @@ bb:
 )
 
 func TestBool(t *testing.T) {
-	y, err := simpleyaml.NewYaml(data)
+	y, err := waml.NewYaml(data)
 	assert.NoError(t, err)
 
 	v, err := y.Get("bool").Bool()
@@ -40,7 +40,7 @@ func TestBool(t *testing.T) {
 }
 
 func TestString(t *testing.T) {
-	y, err := simpleyaml.NewYaml(data)
+	y, err := waml.NewYaml(data)
 	assert.NoError(t, err)
 
 	v, err := y.Get("name").String()
@@ -51,7 +51,7 @@ func TestString(t *testing.T) {
 }
 
 func TestStringFromIntKey(t *testing.T) {
-	y, err := simpleyaml.NewYaml(data)
+	y, err := waml.NewYaml(data)
 	assert.NoError(t, err)
 
 	v, err := y.Get(0).String()
@@ -63,7 +63,7 @@ func TestStringFromIntKey(t *testing.T) {
 }
 
 func TestFloat(t *testing.T) {
-	y, err := simpleyaml.NewYaml(data)
+	y, err := waml.NewYaml(data)
 	assert.NoError(t, err)
 
 	v, err := y.Get("float").Float()
@@ -75,7 +75,7 @@ func TestFloat(t *testing.T) {
 }
 
 func TestInt(t *testing.T) {
-	y, err := simpleyaml.NewYaml(data)
+	y, err := waml.NewYaml(data)
 	assert.NoError(t, err)
 
 	v, err := y.Get("age").Int()
@@ -87,7 +87,7 @@ func TestInt(t *testing.T) {
 }
 
 func TestGetIndex(t *testing.T) {
-	y, err := simpleyaml.NewYaml(data)
+	y, err := waml.NewYaml(data)
 	assert.NoError(t, err)
 
 	v, err := y.Get("bb").Get("cc").Get("dd").GetIndex(1).Int()
@@ -97,7 +97,7 @@ func TestGetIndex(t *testing.T) {
 }
 
 func TestString2(t *testing.T) {
-	y, err := simpleyaml.NewYaml(data)
+	y, err := waml.NewYaml(data)
 	assert.NoError(t, err)
 
 	v, err := y.Get("bb").Get("cc").Get("ee").String()
@@ -109,7 +109,7 @@ func TestString2(t *testing.T) {
 }
 
 func TestGetPath(t *testing.T) {
-	y, err := simpleyaml.NewYaml(data)
+	y, err := waml.NewYaml(data)
 	assert.NoError(t, err)
 
 	v, err := y.GetPath("bb", "cc", "ee").String()
@@ -121,7 +121,7 @@ func TestGetPath(t *testing.T) {
 }
 
 func TestGetAllPaths(t *testing.T) {
-	y, err := simpleyaml.NewYaml(data)
+	y, err := waml..NewYaml(data)
 	assert.NoError(t, err)
 
 	v, err := util.GetAllPaths(y)
@@ -133,7 +133,7 @@ func TestGetAllPaths(t *testing.T) {
 }
 
 func TestArray(t *testing.T) {
-	y, err := simpleyaml.NewYaml(data)
+	y, err := waml..NewYaml(data)
 	assert.NoError(t, err)
 
 	v, err := y.Get("emails").Array()
@@ -145,7 +145,7 @@ func TestArray(t *testing.T) {
 }
 
 func TestMap(t *testing.T) {
-	y, err := simpleyaml.NewYaml(data)
+	y, err := waml.NewYaml(data)
 	assert.NoError(t, err)
 	assert.True(t, y.IsMap())
 
@@ -158,7 +158,7 @@ func TestMap(t *testing.T) {
 }
 
 func TestIsFound(t *testing.T) {
-	y, err := simpleyaml.NewYaml(data)
+	y, err := waml.NewYaml(data)
 	assert.NoError(t, err)
 
 	assert.True(t, y.Get("name").IsFound())

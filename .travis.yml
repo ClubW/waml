@@ -7,9 +7,9 @@ go:
 
 install:
   - go get -v gopkg.in/yaml.v2
-  - go get -v github.com/smallfish/simpleyaml
+  - go get -v github.com/clubw/waml
 
-script: 
+script:
   - go test -v -cover -race
 
 notifications:

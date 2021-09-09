@@ -1,4 +1,4 @@
-module github.com/smallfish/simpleyaml
+module github.com/winc/waml
 
 go 1.16
 

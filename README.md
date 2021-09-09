@@ -1,13 +1,13 @@
-## simpleyaml
+## waml A.K.A. simpleyaml
 
 a Go package to interact with arbitrary YAML, similar as [go-simplejson](https://github.com/bitly/go-simplejson).
 
-[![GoDoc](https://godoc.org/github.com/smallfish/simpleyaml?status.svg)](http://godoc.org/github.com/smallfish/simpleyaml) [![Build Status](https://travis-ci.org/smallfish/simpleyaml.png)](https://travis-ci.org/smallfish/simpleyaml)
+[![GoDoc](https://godoc.org/github.com/clubw/waml?status.svg)](http://godoc.org/github.com/clubw/waml) [![Build Status](https://travis-ci.org/clubw/waml.png)](https://travis-ci.org/clubw/waml)
 
 #### INSTALL
-    
+
 ```bash
-$ go get -u -v github.com/smallfish/simpleyaml
+$ go get -u -v github.com/clubw/waml
 ```
 
 #### EXAMPLE

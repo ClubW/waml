@@ -5,14 +5,14 @@ import (
 	"errors"
 	"strconv"
 
-	"github.com/smallfish/simpleyaml"
+	"github.com/clubw/waml"
 )
 
 var (
 	ArrayOfPaths = make([]string, 0)
 )
 
-func GetAllExistingPaths(y *simpleyaml.Yaml, PathSlice []string) ([]string, error) {
+func GetAllExistingPaths(y *waml.Yaml, PathSlice []string) ([]string, error) {
 	if y.IsMap() {
 		keys, err := y.GetMapKeys()
 		if err != nil {
@@ -61,7 +61,7 @@ func GetAllExistingPaths(y *simpleyaml.Yaml, PathSlice []string) ([]string, erro
 //
 // Example:
 //      util.GetAllPaths(*Yaml)
-func GetAllPaths(y *simpleyaml.Yaml) ([]string, error) {
+func GetAllPaths(y *waml.Yaml) ([]string, error) {
 	InitialPath := make([]string, 0)
 	AllPaths, err := GetAllExistingPaths(y, InitialPath)
 	if err != nil {
